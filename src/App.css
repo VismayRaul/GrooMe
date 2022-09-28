@@ -1,38 +1,68 @@
 .App {
   text-align: center;
+  font-family: 'Antonio', sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.nav{
+  background-color: transparent;
+  padding: 10px 5% 10px 5%;
+  font-size: 30px;
+  position:fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+  transition: 0.32s ease-in-out;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.banner {
+  height: 730px;
+  margin-top: 0;
+  padding: 70px 0 0px 0;
+  background-image: url('./assets/img/bg-img.jpg');
+  /* background-position: center left center; */
+  background-position: center;
+  background-size: cover;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width: 768px) {
+  .banner {
+    background-image: none;
+    background-color: #4A2C66;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.flex-container{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin: 5%;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-container > div {
+  /* background-color: #f1f1f1; */
+  width: 45%;
+  margin: auto;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+@media screen and (max-width: 768px) {
+  .flex-container > div {
+    margin: auto;
+    text-align: center;
+    font-size: 25px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button{
+  background-color: rgb(224, 221, 30);
+  border: none;
+  padding: 10px 22px ;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.button:hover{
+  background-color: rgb(163, 160, 22);
 }
