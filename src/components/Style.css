@@ -269,6 +269,8 @@
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
     width: 25%;
+  box-shadow: 5px 5px 10px #4A2C66;
+
   }
 
   /* -------------------------------footer----------------------- */
