@@ -4,7 +4,7 @@ import menu from '../assets/img/menu.png'
 
 export const Navbar = ()=>{
     const [ scrolled, setScrolled ] = useState(false)
-
+    const [ isNavExpanded, setIsNavExpanded ] = useState(false)
 
     useEffect(()=>{
         const onScroll = ()=>{
@@ -29,8 +29,9 @@ export const Navbar = ()=>{
                             GrooMe
                         </strong>
                     </div>
-                    <div className='nav-list-div'>
-                        <ul className='nav-list'>
+                    {/* <div className='nav-list-div'> */}
+                    <div className={isNavExpanded ? "nav-list-div expanded" : "nav-list-div"}>
+                        <ul>
                             <li>
                                 Home
                             </li>
@@ -46,7 +47,7 @@ export const Navbar = ()=>{
                         </ul>
                     </div>
                     <div className='menu-bar'>
-                        <img src={menu}/>
+                        <img src={menu} onClick={()=>{ setIsNavExpanded(!isNavExpanded) }}/>
                     </div>
                 </div>
             </div>
